@@ -1,5 +1,6 @@
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { IoMdHeart } from "react-icons/io";
 import { MdDownloadForOffline } from "react-icons/md";
 
@@ -29,7 +30,7 @@ const PhotoCard = ({photo}) => {
                 <p ><MdDownloadForOffline /></p>
                 <p >{photo.downloads}</p>
             </div>
-            <Button variant="primary" className="bg-gray-200 border rounded-full py-2 text-xl font-semibold w-full">View</Button>
+           <Link href={`/all-photos/${photo.id}`}> <Button variant="primary" className="bg-gray-200 border rounded-full py-2 text-xl font-semibold w-full">View</Button></Link>
         </Card>
     );
 };
